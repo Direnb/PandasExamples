@@ -30,5 +30,8 @@ result =df[df["Rating"] >= 8.0][["Movie_Title", "Rating"]].head(50) #8
 #print(df.columns)
 result = df[(df["YR_Released"] >=2014) & (df["YR_Released"] <=2015)][["Movie_Title", "YR_Released"]] #9
 
+result = df[(df["Num_Reviews"] > 100000) | ((df["Rating"]) < 9 & (df["Rating"] < 8))][["Movie_Title", "Num_Reviews"]] #10
+
+
 print(result)
 
